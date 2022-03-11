@@ -87,9 +87,8 @@ namespace TestAppZMS
                     item.Err = err;
                     return;
                 }
-                var context = new MSSQLContext();
-                context.ZGLV.Add(NPR_LIST.ReadFromFile(item.FilePath).ToEntity());
-                await context.SaveChangesAsync();
+                repo.ZGLV.Add(NPR_LIST.ReadFromFile(item.FilePath).ToEntity());
+                await repo.SaveChangesAsync();
                 item.Result = true;
             }
             catch (Exception ex)
