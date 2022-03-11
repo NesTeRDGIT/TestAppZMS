@@ -41,6 +41,7 @@ namespace TestAppZMS.Class
                         errList.Add($"WARNING: [{ e.Exception.LineNumber},{e.Exception.LinePosition}] {e.Message}");
                         break;
                 }
+                errList.Add("");
             };
             //XmlSettings_ValidationEventHandler;
             using var r = new XmlTextReader(path);
